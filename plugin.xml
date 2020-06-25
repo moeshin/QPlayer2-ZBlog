@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin version="php">
+<id>QPlayer2</id>
+<name>QPlayer2</name>
+<url>https://github.com/moeshin/QPlayer2-ZBlog</url>
+<note>一款简洁小巧的 HTML5 底部悬浮音乐播放器</note>
+<path>main.php</path>
+<include>include.php</include>
+<level>1</level>
+<author>
+  <name>MoeShin</name>
+  <email>764686875@qq.com</email>
+  <url>https://moeshin.com/</url>
+</author>
+<adapted>172330</adapted>
+<version>2.0.0</version>
+<pubdate>2020-06-25</pubdate>
+<modified>2020-06-25</modified>
+<price>0</price>
+<phpver>5.3</phpver>
+</plugin>
