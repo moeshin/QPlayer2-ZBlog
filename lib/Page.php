@@ -38,7 +38,7 @@ class Page
         $this->textarea(
             'list',
             '歌曲别表',
-            <<<HTML
+            '
 <a target="_blank" href="https://www.json.cn/">JSON 格式</a> 的数组，具体属性请看 
 <a target="_blank" href="https://github.com/moeshin/QPlayer2#list-item">这里</a><br>
 您也可以添加，例如：私人雷达<br>
@@ -47,16 +47,16 @@ class Page
 <code>server</code>：netease、tencent、baidu、xiami、kugou<br>
 <code>type</code>：playlist、song、album、artist<br>
 （附：<a target="_blank" href="https://github.com/moeshin/netease-music-dynamic-playlist">网易云动态歌单整理</a>）
-HTML
+'
         );
         $this->textarea(
             'cookie',
             '网易云音乐 Cookie',
-            <<<HTML
+            '
 如果您是网易云音乐的会员或者使用私人雷达等动态歌单，可以将您的 cookie 的 <code>MUSIC_U</code>
 填入此处来获取云盘等付费资源，听歌将不会计入下载次数<br>
 <strong>如果不知道这是什么意思，忽略即可</strong>
-HTML
+'
         );
         $this->radio(
             'cacheType',

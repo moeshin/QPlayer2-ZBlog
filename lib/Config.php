@@ -25,8 +25,7 @@ class Config
         $r = array(
             'bitrate' => '320',
             'color' => '#EE1122',
-            'list' => <<<JSON
-[{
+            'list' => '[{
     "name": "Nightglow",
     "artist": "蔡健雅",
     "audio": "https://cdn.jsdelivr.net/gh/moeshin/QPlayer-res/Nightglow.mp3",
@@ -34,12 +33,10 @@ class Config
     "lrc": "https://cdn.jsdelivr.net/gh/moeshin/QPlayer-res/Nightglow.lrc"
 },
 {
-    "name": "やわらかな光",
-    "artist": "やまだ豊",
+    "name": "やわらかな光",    "artist": "やまだ豊",
     "audio": "https://cdn.jsdelivr.net/gh/moeshin/QPlayer-res/やわらかな光.mp3",
     "cover": "https://cdn.jsdelivr.net/gh/moeshin/QPlayer-res/やわらかな光.jpg"
-}]
-JSON,
+}]',
             'cacheType' => 'none'
         );
         foreach ($names as $name) {
