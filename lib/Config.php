@@ -21,7 +21,7 @@ class Config
 
     private function getDefault()
     {
-        $names = array('cdn', 'jQuery', 'isRotate', 'isShuffle');
+        $names = array('cdn', 'isRotate', 'isShuffle');
         $r = array(
             'bitrate' => '320',
             'color' => '#EE1122',
@@ -47,7 +47,8 @@ class Config
 
     public function get($key)
     {
-        return @$this->config->$key;
+        $config = $this->config;
+        return isset($config->$key) ? $config->$key : null;
     }
 
     public function bool($key)
@@ -106,9 +107,9 @@ class Config
         // Checkbox
         $keys = array(
             'cdn',
-            'jQuery',
             'isRotate',
             'isShuffle',
+            'isAutoplay'
         );
         foreach ($keys as $key) {
             $config->$key = isset($input[$key]);

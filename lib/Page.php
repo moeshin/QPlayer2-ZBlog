@@ -16,9 +16,9 @@ class Page
             '常规',
             array(
                 'cdn' => '使用 jsDelivr CDN 免费加速 js、css 文件',
-                'jQuery' => '加载 jQuery。若冲突，请关闭',
                 'isRotate' => '旋转封面',
-                'isShuffle' => '随机播放'
+                'isShuffle' => '随机播放',
+                'isAutoplay' => '自动播放'
             )
         );
         $this->text(

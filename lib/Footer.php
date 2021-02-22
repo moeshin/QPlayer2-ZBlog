@@ -16,29 +16,27 @@ class Footer
         $api = $url . 'api.php';
         $cdn = $core->get('cdn');
         $footer = &$zbp->footer;
-        if ($core->get('jQuery')) {
-            $prefix = $cdn ? 'https://cdn.jsdelivr.net/npm/jquery@' . Config::verJQ . '/dist' : $assets;
-            $footer .= '<script src="' . $prefix  . '/jquery.min.js"></script>';
-        }
-        $prefix = $cdn ? 'https://cdn.jsdelivr.net/npm/jquery.marquee@' . Config::verMarquee : $assets;
-        $footer .=  '<script src="' . $prefix . '/jquery.marquee.min.js"></script>';
         $prefix = $cdn
             ? 'https://cdn.jsdelivr.net/gh/moeshin/QPlayer2-ZBlog@' . self::getVersion() . '/assets'
             : $assets;
         $footer .= <<<HTML
-<link rel="stylesheet" href="$prefix/QPlayer.css">
-<script src="$prefix/QPlayer.js"></script>
+<link rel="stylesheet" href="$prefix/QPlayer.min.css">
+<script src="$prefix/QPlayer.min.js"></script>
 <script src="$prefix/QPlayer-plugin.js"></script>
 <script>
-$(function() {
+(function() {
     var q = QPlayer;
     var plugin = q.plugin;
+    var $ = q.$;
     plugin.api = '$api';
     plugin.setList({$core->text('list')});
     q.isRoate = {$core->bool('isRotate')};
     q.isShuffle = {$core->bool('isShuffle')};
-    q.setColor('{$core->text('color')}');
-});
+    q.isAutoplay = {$core->bool('isAutoplay')};
+    $(function () {
+        q.setColor('{$core->text('color')}');
+    });
+})();
 </script>
 HTML;
     }
